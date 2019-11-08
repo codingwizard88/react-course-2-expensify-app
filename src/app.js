@@ -11,6 +11,12 @@ import getVisibleExpenses from './selectors/expenses'
 import 'react-dates/lib/css/_datepicker.css'
 
 
+var airbrake = new airbrakeJs.Client({
+    projectId: 250542,
+    projectKey: 'dc63f2133ad1b121018d3b6a14a6a528'
+  });
+  
+  
 //this creates a store and include the 2 reducers in it.
 //once the store exists, all the default store methods become available.    
 const store = configureStore()
