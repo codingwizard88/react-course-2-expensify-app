@@ -16,15 +16,14 @@ import 'react-dates/lib/css/_datepicker.css'
 const store = configureStore()
 
 //we implement addExpense on an object, so we need to use curly braces and paired key and value
-store.dispatch(addExpense({description:'Water Bill', amount:4500}))
+/* store.dispatch(addExpense({description:'Water Bill', amount:4500}))
 store.dispatch(addExpense({description:'Gas Bill', createdAt: 1000}))
-store.dispatch(addExpense({description:'Rent', amount:1095}))
-store.dispatch(setTextFilter(''))
+store.dispatch(addExpense({description:'Rent', amount:1095})) */
 
 //once the setTextFilter sets the 'text' value, this value is passed to the Get visible expenses method, which has these..
 //..parameters :(expenses, { text, sortBy, startDate, endDate })
-const state = store.getState()
-const visibleExpenses =  getVisibleExpenses(state.expenses,state.filters)
+// const state = store.getState()
+// const visibleExpenses =  getVisibleExpenses(state.expenses,state.filters)
 //the state.filters is passed in where the above 4 parameters are expected, and they so happen to be the..
 //..4 parameters of the filter state, and who says so? the filter reducer!
 
